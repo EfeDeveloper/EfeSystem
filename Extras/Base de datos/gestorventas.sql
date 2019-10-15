@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 11-10-2019 a las 02:26:54
+-- Tiempo de generación: 14-10-2019 a las 21:03:01
 -- Versión del servidor: 5.7.26
--- Versión de PHP: 7.3.5
+-- Versión de PHP: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,10 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_ventas`
+-- Base de datos: `gestorventas`
 --
-CREATE DATABASE IF NOT EXISTS `bd_ventas` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `bd_ventas`;
+CREATE DATABASE IF NOT EXISTS `gestorventas` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `gestorventas`;
 
 -- --------------------------------------------------------
 
