@@ -24,7 +24,7 @@ public class Conexion {
     public Conexion() {
         this.pass = "Edwin@2556_74";
         this.user = "root";
-        this.url = "jdbc:mysql://localhost:3306/bd_ventas";
+        this.url = "jdbc:mysql://localhost:3306/gestorventas";
     }
 
     public Connection Conexion() {
