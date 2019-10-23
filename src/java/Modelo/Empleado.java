@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.security.Timestamp;
+
 /**
  *
  */
@@ -23,10 +25,10 @@ public class Empleado {
     public Empleado() {
     }
 
-    public Empleado(int id, String documento, String nombre, String apellido, String contraseña, String telefono, String usuario, String estado) {
+    public Empleado(int id, String documento, String nombres, String apellido, String contraseña, String telefono, String usuario, String estado) {
         this.id = id;
         this.documento = documento;
-        this.nombres = nombre;
+        this.nombres = nombres;
         this.apellido = apellido;
         this.contraseña = contraseña;
         this.telefono = telefono;

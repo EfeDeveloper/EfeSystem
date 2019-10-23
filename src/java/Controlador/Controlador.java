@@ -13,6 +13,7 @@ public class Controlador extends HttpServlet {
 
     Empleado em;
     EmpleadoDAO edao;
+    int idempl;
 
     public Controlador() {
         this.edao = new EmpleadoDAO();
@@ -38,13 +39,53 @@ public class Controlador extends HttpServlet {
                     request.setAttribute("empl", list);
                     break;
                 case "Add":
-
+                    String doc = request.getParameter("TDoc");
+                    String nom = request.getParameter("TNom");
+                    String ape = request.getParameter("TApe");
+                    String con = request.getParameter("TCon");
+                    String tel = request.getParameter("TTel");
+                    String usu = request.getParameter("TUsua");
+                    String est = request.getParameter("TEst");
+                    em.setDocumento(doc);
+                    em.setNombres(nom);
+                    em.setApellido(ape);
+                    em.setContraseña(con);
+                    em.setTelefono(tel);
+                    em.setUsuario(usu);
+                    em.setEstado(est);
+                    edao.Add(em);
+                    request.getRequestDispatcher("Controlador?Empleado=Controlador&ejecutar=List").forward(request, response);
                     break;
                 case "Edit":
-
+                    idempl = Integer.parseInt(request.getParameter("id"));
+                    Empleado e = edao.listarId(idempl);
+                    request.setAttribute("empleado", e);
+                    request.getRequestDispatcher("Controlador?menu=Empleado&ejecutar=List").forward(request, response);
                     break;
-                case "Delete":
+                case "Update":
+                    String docum = request.getParameter("TDoc");
+                    String nomb = request.getParameter("TNom");
+                    String apell = request.getParameter("TApe");
+                    String contr = request.getParameter("TCon");
+                    String tele = request.getParameter("TTel");
+                    String usua = request.getParameter("TUsua");
+                    String esta = request.getParameter("TEst");
+                    em.setDocumento(docum);
+                    em.setNombres(nomb);
+                    em.setApellido(apell);
+                    em.setContraseña(contr);
+                    em.setTelefono(tele);
+                    em.setUsuario(usua);
+                    em.setEstado(esta);
+                    em.setId(idempl);
+                    edao.Edit(em);
+                    request.getRequestDispatcher("Controlador?menu=Empleado&ejecutar=List").forward(request, response);
+                    break;
 
+                case "Delete":
+                    idempl = Integer.parseInt(request.getParameter("id"));
+                    edao.Delete(idempl);
+                    request.getRequestDispatcher("Controlador?menu=Empleado&ejecutar=List").forward(request, response);
                     break;
                 default:
                     throw new AssertionError();

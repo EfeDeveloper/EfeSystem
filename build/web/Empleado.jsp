@@ -10,43 +10,44 @@
     </head>
     <body>
         <div class="d-flex">
-            <div class="card col-sm-4" >
+            <div class="card col-sm-4">
                 <div class="card-body">
-                    <form>
+                    <form action="Controlador?menu=Empleado" method="POST">
                         <div class="form-group">
                             <label>Documento</label>
-                            <input type="text" name="TDoc" class="form-control">
+                            <input type="text"  value="${empleado.getDocumento()}" name="TDoc" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Nombres</label>
-                            <input type="text" name="TNom" class="form-control">
+                            <input type="text" value="${empleado.getNombres()}" name="TNom" class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label>Apellidos</label>
-                            <input type="text" name="TApe" class="form-control">
+                            <input type="text" value="${empleado.getApellido()}" name="TApe" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="text" name="TCon" class="form-control">
+                            <input type="password" value="${empleado.getContraseña()}" name="TCon" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Telefono</label>
-                            <input type="text" name="TTel" class="form-control">
+                            <input type="text" value="${empleado.getTelefono()}" name="TTel" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Usuario</label>
-                            <input type="text" name="TUsua" class="form-control">
+                            <input type="text" value="${empleado.getUsuario()}" name="TUsua" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Estado</label>
-                            <input type="text" name="TEst" class="form-control">
+                            <input type="text" value="${empleado.getEstado()}" name="TEst" class="form-control">
                         </div>
-                        <input type="submit" name="accion" value="Agregar" class="btn btn-info btn-block"
+                        <input type="submit" name="ejecutar" value="Add" class="btn btn-info btn-block">
+                        <input type="submit" name="ejecutar" value="Update" class="btn btn-success btn-block">
                     </form>
                 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="table-responsive">
                 <table class='table'>
                     <thead>
                         <tr>
@@ -75,8 +76,10 @@
                                 <td>${em.getUsuario()}</td>
                                 <td>${em.getEstado()}</td>
                                 <td>
-                                    <a>Editar</a>
-                                    <a>Eliminar</a>
+                                    <div>
+                                        <a href="Controlador?menu=Empleado&ejecutar=Edit&id=${em.getId()}" class="btn btn-warning btn-xl">Editar</a>
+                                        <a href="Controlador?menu=Empleado&ejecutar=Delete&id=${em.getId()}" class="btn btn-danger btn-xl">Eliminar</a>
+                                    </div>
                                 </td>
                             </tr>
                         </c:forEach>

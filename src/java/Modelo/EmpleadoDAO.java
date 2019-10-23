@@ -67,7 +67,7 @@ public class EmpleadoDAO {
     }
 
     public int Add(Empleado em) {
-        String sql = "insert into empleado (documentId,nombres,apellido,contraseña,telefono,usuario,estado) values (?,?,?,?,?,?,?)";
+        String sql = "insert into empleado (documentId, nombres, apellido, contraseña, telefono, usuario, estado) values (?,?,?,?,?,?,?)";
         try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
@@ -108,7 +108,7 @@ public class EmpleadoDAO {
     }
 
     public int Edit(Empleado em) {
-        String sql = "update empleado set documentId=?, nombres=?, apellido=?, contraseña=?, telefono=?, usuario=?, estado=?) where idEmpleado=?";
+        String sql = "update empleado set documentId=?, nombres=?, apellido=?, contraseña=?, telefono=?, usuario=?, estado=? where idEmpleado=?";
         try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);

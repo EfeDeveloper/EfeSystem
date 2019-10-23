@@ -8,7 +8,7 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#00BFFF">
-            <a class="navbar-brand" style="margin-left: 5px; border: none" href="#">EfeSystem</a>
+            <a class="navbar-brand" style="margin-left: 5px; border: none" href="#"><strong style="color:#FFFFFF">EfeSystem</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,7 +58,7 @@
             </div>
         </nav>
         <div class="m-12" style="height: 800px">
-            <iframe name="Frame" style="height: 100%; width: 100%;border: none"></iframe>
+            <iframe name="Frame" style="height: 100%; width: 100%;border: none" class="embed-responsive embed-responsive-16by9"></iframe>
         </div> 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
