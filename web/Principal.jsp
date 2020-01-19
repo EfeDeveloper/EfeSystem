@@ -39,7 +39,7 @@
                     ${usuario.getNombres()}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#"><img src="media/usuario.png" alt="70" width="70"/></a>
+                    <a class="dropdown-item" href="#"><img src="imag/Login.svg" alt="70" width="70"/></a>
                     <a class="dropdown-item" href="#">${usuario.getUsuario()}</a>
                     <a class="dropdown-item" href="#">${usuario.getNombres()}</a>
                     <div class="dropdown-divider"></div>

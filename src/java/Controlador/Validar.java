@@ -45,7 +45,7 @@ public class Validar extends HttpServlet {
         String ejecutar = request.getParameter("enviar");
         /*si la variable accion es igual al boton ingresar 
         capturara los datos ingresados ↓ */
-        if (ejecutar.equalsIgnoreCase("Ingresar")) {
+        if (ejecutar.equalsIgnoreCase("Login")) {
             String usuario = request.getParameter("TUsu");
             String contraseña = request.getParameter("TPass");
             /*em.setUsuario(usuario);
